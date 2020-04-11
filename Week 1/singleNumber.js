@@ -21,18 +21,18 @@
  * Notes:
  *
  * My first idea was to implement a hashmap and count the occurrences
- * then iterate through the hashmap and return the one that had a count of 1
+ * then iterate through the hashmap and return the one that had a count of 1.
  *
- * However, in researching the different answers to this problem, I learned something
- * that seemed so obvious right after I'd heard it.
+ * However, in researching the different ways to solve this problem I found a few ways
+ * to improve upon that approach.
  *
  * Using a hashmap is a good way to approach this problem, however make it a bit
  * smarter by deleting the item if it is ever spotted more than once. Basically instead
  * of incrementing the count, just delete it all together. That way in the end you don't
- * have to iterate through the hashmap (because the length will only be 1 anyway) ->
+ * have to iterate through the hashmap (because the length will only be 1) ->
  * much faster!
  *
- * Could also do this with a Set
+ * Could also use a Set.
  *
  */
 
@@ -41,7 +41,6 @@
 //   const hist = {};
 
 //   for (let i = 0; i < nums.length; i++) {
-//     console.log(nums[i]);
 //     if (hist[nums[i]] === 1) {
 //       delete hist[nums[i]];
 //     } else {
@@ -50,9 +49,7 @@
 //   }
 
 //   for (let key in hist) {
-//     console.log(key)
 //     if (hist[key] === 1) {
-//       console.log(key);
 //       return key;
 //     }
 //   }
@@ -89,6 +86,4 @@ var singleNumber = function(nums) {
   return x;
 };
 
-const nums = [4,1,2,1,2];
-const answer = singleNumber(nums);
-console.log(singleNumber(nums));  // should be 4
+module.exports = singleNumber;

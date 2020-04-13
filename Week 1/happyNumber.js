@@ -30,6 +30,7 @@
 //   return false;
 // };
 
+/* HELPER FUNCTION */
 const f = num => {
   let sum = 0;
   while (num) {
@@ -73,5 +74,4 @@ var isHappy = function(n) {
 //   return false;
 // };
 
-console.log(isHappy(7) === true); // expect true
-console.log(isHappy(8) === true); // expect false
+module.exports = isHappy;

@@ -65,8 +65,4 @@ var groupAnagrams = function(strs) {
 //     return [...res.values()];
 // };
 
-const input = ["eat", "tea", "tan", "ate", "nat", "bat"];
-console.log(groupAnagrams(input));
-
-const input2 = ["tea","","eat","","tea",""];
-console.log(groupAnagrams(input2));
+module.exports = groupAnagrams;

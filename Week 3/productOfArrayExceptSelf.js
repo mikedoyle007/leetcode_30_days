@@ -2,23 +2,6 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-// Ignores the constrains of the problem
-// var productExceptSelf = function(nums) {
-//   const product = nums.reduce((a, b) => a * b);
-//   const output = [];
-
-//   for (let i = 0; i < nums.length; i++) {
-//     output.push(product / nums[i]);
-//   }
-
-//   return output;
-// };
-
-
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
 var productExceptSelf = function(nums) {
   const len = nums.length;
   const product = [];
@@ -44,4 +27,4 @@ var productExceptSelf = function(nums) {
 };
 
 
-console.log(productExceptSelf([1,2,3,4]));
+console.log(productExceptSelf([1,2,3,4]));  // expect: [24,12,8,6]

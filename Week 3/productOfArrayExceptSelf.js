@@ -4,7 +4,7 @@
  */
 var productExceptSelf = function(nums) {
   const len = nums.length;
-  const product = [];
+  const product = new Array(len);
   const pref = new Array(len);
   const suff = new Array(len);
 
@@ -25,6 +25,28 @@ var productExceptSelf = function(nums) {
 
   return product;
 };
+
+
+// var productExceptSelf = function(nums) {
+//   const len = nums.length;
+//   const pref = [1];
+//   let last;
+//   for (let i = 0; i < len; i++) {
+//     last = pref[pref.length-1];
+//     pref.push(last * nums[i]);
+//   }
+
+//   const suf = new Array(pref.length).fill(1);
+//   for (let i = len-1; i >= 0; i--) {
+//     suf[i] = suf[i+1] * nums[i];
+//   }
+
+//   const answer = new Array(len);
+//   for (let i = 0; i < len; i++) {
+//     answer[i] = pref[i] * suf[i+1];
+//   }
+//   return answer;
+// };
 
 
 console.log(productExceptSelf([1,2,3,4]));  // expect: [24,12,8,6]

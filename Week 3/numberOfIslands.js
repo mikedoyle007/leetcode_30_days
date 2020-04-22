@@ -22,7 +22,7 @@ var numIslands = function(grid) {
 
   let islands = 0;
 
-  if (grid.length == 0) {
+  if (grid === null || grid.length == 0) {
     return 0;
   }
 

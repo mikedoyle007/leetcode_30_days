@@ -10,6 +10,33 @@
  * @param {TreeNode} root
  * @return {number}
  */
+// After some refactoring
+var maxPathSum = function(root) {
+  let max = root.val;
+
+  const traverse = node => {
+
+    const left  = node.left ? traverse(node.left) : 0;
+    const right = node.right ? traverse(node.right) : 0;
+    const val   = node.val;
+
+    max = Math.max(
+      max,
+      val,
+      val + left,
+      val + right,
+      val + left + right);
+
+    return Math.max(val, val + Math.max(left, right));
+  }
+
+  traverse(root);
+
+  return max;
+};
+
+
+// First working version
 var maxPathSum = function(root) {
   let max = -Infinity;
 
